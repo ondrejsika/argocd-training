@@ -39,6 +39,16 @@ slu acd ip
 slu acd ip | pbcopy
 ```
 
+Get / Open ArgoCD URL
+
+```
+slu argocd get
+```
+
+```
+slu argocd open
+```
+
 Reset `admin` password
 
 ```
