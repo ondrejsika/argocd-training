@@ -21,6 +21,34 @@
 - **Configuration management tool** See **Tool**.
 - **Configuration management plugin** A custom tool.
 
+## CLI
+
+### slu CLI
+
+Get Initial `admin` password
+
+```
+slu argocd initial-password
+```
+
+```
+slu acd ip
+```
+
+```
+slu acd ip | pbcopy
+```
+
+Reset `admin` password
+
+```
+slu argocd password-reset
+```
+
+```
+slu acd pr
+```
+
 ## Thank you! & Questions?
 
 That's it. Do you have any questions? **Let's go for a beer!**
