@@ -61,6 +61,20 @@ See
 <https://argocd.k8s.sikademo.com>
 
 
+## Create basic ArgoCD App
+
+Using CLI
+
+```
+argocd app create example-1 --repo https://github.com/argocd-training/example-1.git --path . --dest-server https://kubernetes.default.svc --dest-namespace default
+```
+
+Declarative
+
+```
+kubectl apply -f argocd-app-example-1.yml
+```
+
 ## CLI
 
 ### argocd CLI
