@@ -63,6 +63,20 @@ See
 
 ## CLI
 
+### argocd CLI
+
+Login
+
+```bash
+acd login <argocd_domain_port>
+```
+
+Login "without" password
+
+```bash
+acd login $(slu acd domain) --username admin --password $(slu acd initial-password)
+```
+
 ### slu CLI
 
 Get Initial `admin` password
