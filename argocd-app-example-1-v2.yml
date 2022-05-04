@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: example-2
+  name: example-1
   namespace: argocd
 spec:
   destination:
-    namespace: example-2
+    namespace: default
     server: https://kubernetes.default.svc
   project: default
   source:
     path: .
-    repoURL: https://github.com/argocd-training/example-2.git
+    repoURL: https://github.com/argocd-training/example-1.git
   syncPolicy:
     automated:
       prune: true

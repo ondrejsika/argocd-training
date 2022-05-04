@@ -101,6 +101,31 @@ Nothing is updated, you can see diff of current state and desired state.
 
 If you want to apply those new changes, you have to click **sync**.
 
+## Create Namespace
+
+ArgoCD don't create namespace for application by default. You have to specify syncOptions `CreateNamespace=true`:
+
+```yaml
+spec:
+  # ...
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+```
+
+## Automatic Sync and Prune
+
+You have to enable automatic sync and prunning by:
+
+```yaml
+spec:
+  # ...
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+```
+
 ## ArgoCD App with Helm
 
 ```
