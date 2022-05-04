@@ -1,0 +1,20 @@
+controller:
+  service:
+    type: ClusterIP
+  ingressClassResource:
+    default: true
+  kind: DaemonSet
+  hostPort:
+    enabled: true
+  metrics:
+    enabled: true
+defaultBackend:
+  enabled: true
+  image:
+    registry: docker.io
+    image: sikalabs/hello-world-server
+    tag: ondrejsika
+  extraEnvs:
+    - name: TEXT
+      value: "ingress-default-backend"
+  port: 8000
