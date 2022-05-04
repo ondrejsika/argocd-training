@@ -82,7 +82,7 @@ Fork [argocd-training/example-1](https://github.com/argocd-training/example-1) t
 Create ArgoCD App using CLI
 
 ```
-argocd app create example-1-own --repo https://gitlab.sikademo.com/ondrejsika/example-1.git --path . --dest-server https://kubernetes.default.svc --dest-namespace example-1-own
+argocd app create example-1-own --repo https://gitlab.sikademo.com/ondrejsika/example-1.git --path . --dest-server https://kubernetes.default.svc --dest-namespace example-1-own --sync-option CreateNamespace=true
 ```
 
 See YAML:
