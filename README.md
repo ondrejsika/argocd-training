@@ -29,6 +29,38 @@ alias acd="argocd "
 - **Configuration management tool** See **Tool**.
 - **Configuration management plugin** A custom tool.
 
+## Install ArgoCD
+
+Install cluster essentials (ingress-nginx, cert-manager, letsencrypt issuer)
+
+```
+make install-essentials
+```
+
+Install ArgoCD
+
+```
+make install-argocd
+make install-essentials
+```
+
+Get `admin` initial password
+
+```
+slu argocd initial-password
+```
+
+Copy to pasteboard (Mac)
+
+```
+slu argocd initial-password | pbcopy
+```
+
+See
+
+<https://argocd.k8s.sikademo.com>
+
+
 ## CLI
 
 ### slu CLI
