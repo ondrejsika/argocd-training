@@ -101,6 +101,12 @@ Nothing is updated, you can see diff of current state and desired state.
 
 If you want to apply those new changes, you have to click **sync**.
 
+## ArgoCD App with Helm
+
+```
+kubectl apply -f argocd-app-example-2.yml
+```
+
 ## CLI
 
 ### argocd CLI
