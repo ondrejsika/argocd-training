@@ -91,6 +91,16 @@ See YAML:
 kubectl -n argocd get app example-1-own -o yaml
 ```
 
+## Manual Sync
+
+Make changes to your repository ([gitlab.sikademo.com/ondrejsika/example-1](https://gitlab.sikademo.com/ondrejsika/example-1)) and see if ArgoCD propagate those changes to cluster.
+
+You can click **refresh** to fetch new repo version.
+
+Nothing is updated, you can see diff of current state and desired state.
+
+If you want to apply those new changes, you have to click **sync**.
+
 ## CLI
 
 ### argocd CLI
