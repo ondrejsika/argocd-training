@@ -4,6 +4,14 @@
 
 ## Course
 
+## Setup
+
+acd alias
+
+```
+alias acd="argocd "
+```
+
 ## Core Concepts
 
 <https://argo-cd.readthedocs.io/en/stable/core_concepts/>
