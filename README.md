@@ -132,6 +132,14 @@ spec:
 kubectl apply -f argocd-app-example-2.yml
 ```
 
+## Sync Hooks
+
+Example with pre & post sync hooks
+
+```
+kubectl apply -f argocd-app-sync-hooks.yml
+```
+
 ## CLI
 
 ### argocd CLI
