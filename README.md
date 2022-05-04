@@ -75,6 +75,22 @@ Declarative
 kubectl apply -f argocd-app-example-1.yml
 ```
 
+## Create ArgoCD App from own repository
+
+Fork [argocd-training/example-1](https://github.com/argocd-training/example-1) to Gitlab.
+
+Create ArgoCD App using CLI
+
+```
+argocd app create example-1-own --repo https://gitlab.sikademo.com/ondrejsika/example-1.git --path . --dest-server https://kubernetes.default.svc --dest-namespace example-1-own
+```
+
+See YAML:
+
+```
+kubectl -n argocd get app example-1-own -o yaml
+```
+
 ## CLI
 
 ### argocd CLI
