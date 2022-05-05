@@ -195,6 +195,14 @@ Try:
 kubectl apply -f argocd-app-bar.yml
 ```
 
+## App of Apps
+
+App of Apps is global ArgoCD app which is created manually in the cluster and manages all others ArgoCD Apps using ArgoCD
+
+```
+kubectl apply -f https://raw.githubusercontent.com/argocd-training/examples/master/app-of-apps.yml
+```
+
 ## CLI
 
 ### argocd CLI
