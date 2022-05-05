@@ -167,6 +167,34 @@ SSH
 kubectl apply -f repo-https.yml
 ```
 
+## ArgoCD App Projects
+
+```
+kubectl apply -f approj-foo.yml
+kubectl apply -f approj-bar.yml
+```
+
+## Sync Window
+
+We can specify SyncWindow at AppProject by:
+
+```yaml
+spec:
+  syncWindows:
+  - applications:
+    - '*'
+    duration: 10m
+    kind: allow
+    schedule: 0 * * * *
+    timeZone: UTC
+```
+
+Try:
+
+```
+kubectl apply -f argocd-app-bar.yml
+```
+
 ## CLI
 
 ### argocd CLI

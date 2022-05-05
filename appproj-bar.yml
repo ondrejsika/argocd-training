@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: bar
+  namespace: argocd
+spec:
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
+  destinations:
+  - namespace: '*'
+    server: '*'
+  sourceRepos:
+  - '*'
+  syncWindows:
+  - applications:
+    - '*'
+    duration: 10m
+    kind: allow
+    schedule: 0 * * * *
+    timeZone: UTC
