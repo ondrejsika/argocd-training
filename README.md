@@ -140,6 +140,33 @@ Example with pre & post sync hooks
 kubectl apply -f argocd-app-sync-hooks.yml
 ```
 
+## Own SSH known hosts
+
+Get keys using `ssh-keyscan`
+
+```
+ssh-keyscan gitlab.sikademo.com
+```
+
+Add to `configmap` `argocd-ssh-known-hosts-cm` in `argocd` namespace.
+
+```
+kubectl patch -n argocd configmap argocd-ssh-known-hosts-cm --patch-file argocd-ssh-known-hosts-cm-patch.yml
+```
+
+## Private Repositories
+
+HTTPS
+
+```
+kubectl apply -f repo-https.yml
+```
+SSH
+
+```
+kubectl apply -f repo-https.yml
+```
+
 ## CLI
 
 ### argocd CLI

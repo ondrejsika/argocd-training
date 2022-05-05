@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: example-priv
+  namespace: argocd
+  labels:
+    argocd.argoproj.io/secret-type: repository
+stringData:
+  project: default
+  type: git
+  url: git@gitlab.sikademo.com:ondrejsika/private.git
+  username: ondrejsika
+  sshPrivateKey: |
+    -----BEGIN RSA PRIVATE KEY-----
+    MIICXAIBAAKBgQClo4yjxfJ5LLr6TX9NbI83RQoVlRvqyvUrRXEiZTHWv5ZFtrHP
+    6s1BZAMYV73PWN2h/YciQF2FsXkkoV7Nt3IJQJILLXVMVqeqxsgN9+GFGBv5vXvq
+    //EaBXfAoi/E/0+NCsjLFFYmbIEQyw0tT0lGM9g3bUT+vjbi2/Zh3PsJDQIDAQAB
+    AoGAbi9ZwyhOoCUNTKx43rw0mQOoLas/IvVYGizbkZHXkY9pG37o0fLUD4fEN1FG
+    xsPKy5OnbTV8AQ+KEr/2HMrHZCYCUoLMg3L2zuOG99n1+ahFJFkQ0KaYgdx1yaWK
+    Llmgq+uT17WqZEarGSUx3v5FtN/WJaMDawsRIAtW2HnOU9ECQQDFKqD71Noge6nP
+    g7jgmr9cwCPj0awpHtemca2aGhcSNr+5U4cXOw8w31lSXtN3Of+QYNgFhxLFb/vM
+    +VqQx2cHAkEA1xCNO2FR0v2acuYfxE4CUZj41cJVoFhOCgt23He+fJHaJDKECF4v
+    iYXcTKtp7sTSnsxARrwH1oGj+RSKnhDWSwJBAIrIteZt7lhdE6upSZJ3+ulbqier
+    qCaNujhD3nIRmVnNxei6veWBQfEh1irf6rQK1DSZppVFfdYSPEkM4E32vjMCQEG0
+    JtG7W7owDF2J/K6GfqLbLzpvEqXYFI9xDTExzBpWnORuInREAhXrtXAe9lAiBY7K
+    K+DwVRytoqDYK7k6v50CQF/HUGpZ1cWmtiY5k3U+s7H9EzZvXDl4XB4pDgxuooNu
+    qMsq1dlCcYnwbIOtfPgkHtbxgQ/2shGbx++WfpzwoLA=
+    -----END RSA PRIVATE KEY-----
+  # insecure: "true"
