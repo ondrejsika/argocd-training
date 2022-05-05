@@ -61,6 +61,20 @@ See
 <https://argocd.k8s.sikademo.com>
 
 
+### Login to argocd CLI
+
+Login
+
+```bash
+acd login <argocd_domain_port>
+```
+
+Login "without" password
+
+```bash
+acd login $(slu acd domain) --username admin --password $(slu acd initial-password)
+```
+
 ## Create basic ArgoCD App
 
 Using CLI
@@ -201,22 +215,6 @@ App of Apps is global ArgoCD app which is created manually in the cluster and ma
 
 ```
 kubectl apply -f https://raw.githubusercontent.com/argocd-training/examples/master/app-of-apps.yml
-```
-
-## CLI
-
-### argocd CLI
-
-Login
-
-```bash
-acd login <argocd_domain_port>
-```
-
-Login "without" password
-
-```bash
-acd login $(slu acd domain) --username admin --password $(slu acd initial-password)
 ```
 
 ### slu CLI
