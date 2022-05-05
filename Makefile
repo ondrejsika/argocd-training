@@ -10,7 +10,7 @@ install-argocd:
 install-essentials:
 	make install-ingress
 	make install-cert-manager
-	make clusterissuer-letsencrypt
+	make install-clusterissuer-letsencrypt
 
 install-ingress:
 	helm upgrade --install \
