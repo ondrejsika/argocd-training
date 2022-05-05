@@ -129,6 +129,12 @@ spec:
 kubectl apply -f argocd-app-example-2.yml
 ```
 
+or another way
+
+```
+kubectl apply -f argocd-app-helm.yml
+```
+
 ## Sync Hooks
 
 Example with pre & post sync hooks
