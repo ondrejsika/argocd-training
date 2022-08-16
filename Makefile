@@ -21,6 +21,9 @@ install-ingress:
 		--wait \
 		--values ./ingress-nginx.values.yml
 
+install-ingress-with-proxy-protocol:
+	slu scripts kubernetes install-ingress-with --use-proxy-protocol
+
 install-cert-manager:
 	helm upgrade --install \
 		cert-manager cert-manager \
