@@ -22,7 +22,7 @@ install-ingress:
 		--values ./ingress-nginx.values.yml
 
 install-ingress-with-proxy-protocol:
-	slu scripts kubernetes install-ingress-with --use-proxy-protocol
+	slu scripts kubernetes install-ingress --use-proxy-protocol
 
 install-cert-manager:
 	helm upgrade --install \
