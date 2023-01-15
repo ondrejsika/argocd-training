@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: hello-b
+  namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-wave: "3"
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: sync-waves-example
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    repoURL: https://helm.sikalabs.io
+    chart: hello-world
+    targetRevision: 0.4.0
+    helm:
+      releaseName: hello-b
+      values: |
+        replicas: 1
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
