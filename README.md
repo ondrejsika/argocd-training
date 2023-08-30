@@ -242,6 +242,16 @@ slu argocd password-reset
 slu acd pr
 ```
 
+Port forward to ArgoCD without Ingress
+
+```
+slu argocd port-forward
+```
+
+```
+slu acd pf
+```
+
 ## Thank you! & Questions?
 
 That's it. Do you have any questions? **Let's go for a beer!**
