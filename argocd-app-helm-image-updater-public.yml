@@ -1,0 +1,33 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: hello-world-helm-image-updater-public
+  namespace: argocd
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: 1=reg.istry.cz/image-updater-example:latest
+    argocd-image-updater.argoproj.io/1.helm.image-spec: image
+    argocd-image-updater.argoproj.io/1.update-strategy: digest
+    argocd-image-updater.argoproj.io/1.force-update: 'true'
+    argocd-image-updater.argoproj.io/1.platforms: linux/amd64
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: hello-world-helm-image-updater-public
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    repoURL: https://github.com/sikalabs/charts.git
+    targetRevision: HEAD
+    path: charts/one-image
+    helm:
+      releaseName: hello-world-helm-image-updater-public
+      values: |
+        host: hello-world-helm-image-updater-public.k8s.sikademo.com
+        image: reg.istry.cz/image-updater-example
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
