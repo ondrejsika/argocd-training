@@ -206,6 +206,23 @@ App of Apps is global ArgoCD app which is created manually in the cluster and ma
 kubectl apply -f https://raw.githubusercontent.com/argocd-training/examples/master/app-of-apps.yml
 ```
 
+## ArgoCD Image Updater
+
+- Docs - https://argocd-image-updater.readthedocs.io/en/stable/
+- Github - https://github.com/argoproj-labs/argocd-image-updater
+
+### Install
+
+```
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj-labs/argocd-image-updater/stable/manifests/install.yaml
+```
+
+### Public Example
+
+```
+kubectl apply -f argocd-app-helm-image-updater-public.yml
+```
+
 ### slu CLI
 
 Get Initial `admin` password
