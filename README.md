@@ -4,14 +4,6 @@
 
 ## Course
 
-## Setup
-
-acd alias
-
-```
-alias acd="argocd "
-```
-
 ## Install ArgoCD
 
 Install cluster essentials (ingress-nginx, cert-manager, letsencrypt issuer)
@@ -43,28 +35,7 @@ See
 
 <https://argocd.k8s.sikademo.com>
 
-
-### Login to argocd CLI
-
-Login
-
-```bash
-acd login <argocd_domain_port>
-```
-
-Login "without" password
-
-```bash
-acd login $(slu acd domain) --username admin --password $(slu acd initial-password)
-```
-
 ## Create basic ArgoCD App
-
-Using CLI
-
-```
-argocd app create example-1 --repo https://github.com/argocd-training/example-1.git --path . --dest-server https://kubernetes.default.svc --dest-namespace default
-```
 
 Declarative
 
@@ -75,18 +46,6 @@ kubectl apply -f argocd-app-example-1.yml
 ## Create ArgoCD App from own repository
 
 Fork [argocd-training/example-1](https://github.com/argocd-training/example-1) to Gitlab.
-
-Create ArgoCD App using CLI
-
-```
-argocd app create example-1-own --repo https://gitlab.sikademo.com/ondrejsika/example-1.git --path . --dest-server https://kubernetes.default.svc --dest-namespace example-1-own --sync-option CreateNamespace=true
-```
-
-See YAML:
-
-```
-kubectl -n argocd get app example-1-own -o yaml
-```
 
 ## Manual Sync
 
