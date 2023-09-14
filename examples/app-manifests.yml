@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: example-1
+  name: manifests
   namespace: argocd
 spec:
   destination:
@@ -9,5 +9,5 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: .
-    repoURL: https://github.com/argocd-training/example-1.git
+    path: examples/manifests
+    repoURL: https://github.com/ondrejsika/argocd-training.git

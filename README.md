@@ -40,7 +40,7 @@ See
 Declarative
 
 ```
-kubectl apply -f argocd-app-example-1.yml
+kubectl apply -f examples/app-manifests.yml
 ```
 
 ## Create ArgoCD App from own repository
