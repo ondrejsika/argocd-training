@@ -45,11 +45,17 @@ kubectl apply -f examples/app-manifests.yml
 
 ## Create ArgoCD App from own repository
 
-Fork [argocd-training/example-1](https://github.com/argocd-training/example-1) to Gitlab.
+Fork [ondrejsika/argocd-training](https://github.com/ondrjsika/argocd-training) to Gitlab.
 
 ## Manual Sync
 
-Make changes to your repository ([gitlab.sikademo.com/ondrejsika/example-1](https://gitlab.sikademo.com/ondrejsika/example-1)) and see if ArgoCD propagate those changes to cluster.
+Make changes to your repository ([gitlab.sikademo.com/ondrejsika/argocd-training](https://gitlab.sikademo.com/ondrejsika/argocd-training)) and see if ArgoCD propagate those changes to cluster.
+
+Update repo path
+
+```
+kubectl apply -f examples/app-manifests-gitlab.yml
+```
 
 You can click **refresh** to fetch new repo version.
 
