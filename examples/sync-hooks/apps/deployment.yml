@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sync-hooks
+  labels:
+    release: sync-hooks
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      release: sync-hooks
+  template:
+    metadata:
+      labels:
+        release: sync-hooks
+    spec:
+      initContainers:
+        - name: selep20s
+          image: busybox
+          command: ['sh', '-c', 'sleep 20']
+      containers:
+        - name: main
+          image: sikalabs/hello-world-server
+          ports:
+            - name: http
+              containerPort: 8000
+          resources:
+            requests:
+              cpu: 10m
+              memory: 10Mi
+            limits:
+              cpu: 50m
+              memory: 50Mi

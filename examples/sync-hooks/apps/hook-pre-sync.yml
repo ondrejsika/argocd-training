@@ -1,0 +1,19 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: before
+  annotations:
+    argocd.argoproj.io/hook: PreSync
+    argocd.argoproj.io/hook-delete-policy: HookSucceeded
+spec:
+  template:
+    spec:
+      containers:
+      - name: main
+        image: sikalabs/slu:v0.39.0
+        command:
+          - /bin/bash
+          - -c
+          - slu mail send -H maildev.sikademo.com -P 25 -f example@example.com -t example@sikademo.com -s "Pre Sync Hook" -m "Hello from Pre Sync Hook"
+      restartPolicy: Never
+  backoffLimit: 0
