@@ -8,6 +8,12 @@ spec:
     namespace: rabbitmq
     server: https://kubernetes.default.svc
   project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
   source:
     repoURL: https://charts.bitnami.com/bitnami
     chart: rabbitmq
@@ -26,9 +32,4 @@ spec:
           tls: true
           annotations:
             cert-manager.io/cluster-issuer: letsencrypt
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-    syncOptions:
-      - CreateNamespace=true
+
