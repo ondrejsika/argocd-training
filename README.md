@@ -171,6 +171,14 @@ App of Apps is global ArgoCD app which is created manually in the cluster and ma
 kubectl apply -f https://raw.githubusercontent.com/argocd-training/examples/master/app-of-apps.yml
 ```
 
+## Application Set
+
+Application Set is a way how to create multiple ArgoCD Apps from one template.
+
+```
+kubectl apply -f examples/appset.yml
+```
+
 ## ArgoCD Image Updater
 
 - Docs - https://argocd-image-updater.readthedocs.io/en/stable/
