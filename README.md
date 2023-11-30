@@ -90,14 +90,16 @@ spec:
 
 ## ArgoCD App with Helm
 
-```
-kubectl apply -f argocd-app-example-2.yml
-```
-
-or another way
+Helm package from Git repo
 
 ```
-kubectl apply -f argocd-app-helm.yml
+kubectl apply -f examples/helm_from_git.yml
+```
+
+Helm package from Helm repo
+
+```
+kubectl apply -f examples/helm_from_package.yml
 ```
 
 ## Sync Hooks
