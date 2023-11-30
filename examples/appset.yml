@@ -1,0 +1,43 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: appset
+  namespace: argocd
+spec:
+  generators:
+  - list:
+      elements:
+      - name: foo
+        replicas: "1"
+        text: FOO!
+      - name: bar
+        replicas: "2"
+        text: BAR!
+      - name: baz
+        replicas: "3"
+        text: BAZ!
+  template:
+    metadata:
+      name: appset-{{name}}
+      namespace: argocd
+    spec:
+      project: default
+      destination:
+        namespace: hello-world
+        server: https://kubernetes.default.svc
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+          - CreateNamespace=true
+      source:
+        repoURL: https://helm.sikalabs.io
+        chart: hello-world
+        targetRevision: 0.6.0
+        helm:
+          releaseName: '{{name}}'
+          values: |
+            host: 'appset-{{name}}.k8s.sikademo.com'
+            TEXT: '{{text}}'
+            replicas: {{replicas}}
