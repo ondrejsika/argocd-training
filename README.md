@@ -113,7 +113,7 @@ kubectl apply -f examples/helm_with_dependencies.yml
 Example with pre & post sync hooks
 
 ```
-kubectl apply -f argocd-app-sync-hooks.yml
+kubectl apply -f examples/sync-hooks/app-of-apps.yml
 ```
 
 ## Own SSH known hosts
