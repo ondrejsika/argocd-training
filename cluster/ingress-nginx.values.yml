@@ -12,9 +12,12 @@ defaultBackend:
   enabled: true
   image:
     registry: docker.io
-    image: sikalabs/hello-world-server
-    tag: ondrejsika
+    image: sikalabs/sikalabs-kubernetes-ingress-default-page
+    tag: latest
+    pullPolicy: Always
   extraEnvs:
-    - name: TEXT
-      value: "ingress-default-backend"
+    - name: CLUSTER
+      value: "k8s.sikademo.com"
+    - name: DOMAIN
+      value: "k8s.sikademo.com"
   port: 8000
