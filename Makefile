@@ -19,7 +19,7 @@ install-ingress:
 		--create-namespace \
 		--namespace ingress-nginx \
 		--wait \
-		--values ./ingress-nginx.values.yml
+		--values ./cluster/ingress-nginx.values.yml
 
 install-ingress-with-proxy-protocol:
 	slu scripts kubernetes install-ingress --use-proxy-protocol
@@ -31,7 +31,7 @@ install-cert-manager:
 		--create-namespace \
 		--namespace cert-manager \
 		--wait \
-		--values ./cert-manager.values.yml
+		--values ./cluster/cert-manager.values.yml
 
 install-clusterissuer-letsencrypt:
-	kubectl apply -f clusterissuer-letsencrypt.yml
+	kubectl apply -f cluster/clusterissuer-letsencrypt.yml
