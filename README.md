@@ -102,6 +102,12 @@ Helm package from Helm repo
 kubectl apply -f examples/helm_from_package.yml
 ```
 
+You can also install Helm without any specific helm configuration
+
+```
+kubectl apply -f examples/helm_with_dependencies.yml
+```
+
 ## Sync Hooks
 
 Example with pre & post sync hooks
