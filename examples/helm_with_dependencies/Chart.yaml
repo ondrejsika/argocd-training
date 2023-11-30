@@ -1,0 +1,10 @@
+apiVersion: v2
+name: helm-with-dependencies
+description: Example Hello World Chart for ArgoCD training
+type: application
+version: 0.1.0
+
+dependencies:
+- name: hello-world
+  version: 0.8.0
+  repository: https://helm.sikalabs.io
