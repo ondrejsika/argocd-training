@@ -1,0 +1,17 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: sleep10s
+  annotations:
+    argocd.argoproj.io/sync-options: Replace=true
+spec:
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: main
+          image: busybox
+          command:
+            - /bin/sh
+            - -c
+            - sleep 10
