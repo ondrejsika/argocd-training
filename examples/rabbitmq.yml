@@ -22,7 +22,7 @@ spec:
     targetRevision: 10.2.1
     helm:
       releaseName: rabbitmq
-      values: |
+      valuesObject:
         auth:
           username: admin
           password: admin
