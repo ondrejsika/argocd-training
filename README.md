@@ -265,3 +265,11 @@ That's it. Do you have any questions? **Let's go for a beer!**
 _Do you like the course? Write me recommendation on Twitter (with handle `@ondrejsika`) and LinkedIn (add me [/in/ondrejsika](https://www.linkedin.com/in/ondrejsika/) and I'll send you request for recommendation). **Thanks**._
 
 Wanna to go for a beer or do some work together? Just [book me](https://book-me.sika.io) :)
+
+## My Notes
+
+Replace README of training repo with link to this repo
+
+```
+echo '# !!! This is not an original ArgoCD Training repo. This repo has many changes from past training session. If you want to see a original ArgoCD training repo, please go to [ondrejsika/argocd-training](https://github.com/ondrejsika/argocd-training)' > README.md
+```
