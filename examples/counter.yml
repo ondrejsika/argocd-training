@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: counter
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  destination:
+    namespace: counter
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+  source:
+    repoURL: https://github.com/ondrejsika/counter.git
+    path: ./charts/counter
+    helm:
+      releaseName: counter
+      valuesObject:
+        host: counter.k8s.sikademo.com
