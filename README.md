@@ -266,6 +266,16 @@ _Do you like the course? Write me recommendation on Twitter (with handle `@ondre
 
 Wanna to go for a beer or do some work together? Just [book me](https://book-me.sika.io) :)
 
+## Past Training Sessions
+
+### 2023-12-01
+
+- Repositories from gitlab.sikademo.com
+  - example/os - https://github.com/sika-training-examples/2023-12-01_argocd_training_ondrejsika
+  - example/1 - https://github.com/sika-training-examples/2023-12-01_argocd_training_1
+  - example/2 - https://github.com/sika-training-examples/2023-12-01_argocd_training_2
+  - example/3 - https://github.com/sika-training-examples/2023-12-01_argocd_training_3
+
 ## My Notes
 
 Replace README of training repo with link to this repo
