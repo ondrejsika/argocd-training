@@ -201,7 +201,7 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj-labs/argoc
 ### Public Example
 
 ```
-kubectl apply -f argocd-app-helm-image-updater-public.yml
+kubectl apply -f examples/image_updater/helm_public.yml
 ```
 
 ### slu CLI
