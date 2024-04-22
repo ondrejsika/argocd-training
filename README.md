@@ -152,8 +152,8 @@ kubectl apply -f repo-https.yml
 ## ArgoCD App Projects
 
 ```
-kubectl apply -f approj-foo.yml
-kubectl apply -f approj-bar.yml
+kubectl apply -f appproj-foo.yml
+kubectl apply -f appproj-bar.yml
 ```
 
 ## Sync Window
