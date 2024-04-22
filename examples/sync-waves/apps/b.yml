@@ -3,8 +3,6 @@ kind: Application
 metadata:
   name: hello-b
   namespace: argocd
-  annotations:
-    argocd.argoproj.io/sync-wave: "3"
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
@@ -17,7 +15,6 @@ spec:
     chart: hello-world
     targetRevision: 0.4.0
     helm:
-      releaseName: hello-b
       values: |
         replicas: 1
   syncPolicy:
