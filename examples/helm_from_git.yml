@@ -18,7 +18,7 @@ spec:
       - CreateNamespace=true
   source:
     repoURL: https://github.com/sikalabs/charts.git
-    targetRevision: HEAD
+    targetRevision: master
     path: charts/hello-world
     helm:
       releaseName: helm-from-git
