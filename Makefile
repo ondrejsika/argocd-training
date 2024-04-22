@@ -1,11 +1,14 @@
 install-argocd:
+	@make _install-argocd
+
+_install-argocd:
 	helm upgrade --install \
 		argocd argo-cd \
 		--repo https://argoproj.github.io/argo-helm \
 		--create-namespace \
 		--namespace argocd \
 		--wait \
-		--values ./argocd.values.yml
+		--values ./argocd.values.yml ${EXTRA_ARGS}
 
 install-essentials:
 	make install-ingress
