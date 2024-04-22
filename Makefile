@@ -1,6 +1,9 @@
 install-argocd:
 	@make _install-argocd
 
+install-argocd-with-sso:
+	@make _install-argocd EXTRA_ARGS="--values ./argocd.sso.values.yml"
+
 _install-argocd:
 	helm upgrade --install \
 		argocd argo-cd \
