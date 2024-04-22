@@ -22,5 +22,5 @@ spec:
     targetRevision: 0.9.0
     helm:
       releaseName: helm-from-package
-      values: |
+      valuesObject:
         replicas: 3
