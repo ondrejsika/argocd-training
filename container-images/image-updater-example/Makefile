@@ -1,4 +1,4 @@
-IMAGE = reg.istry.cz/image-updater-example
+IMAGE = ttl.sh/image-updater-example
 IMAGE_PRIVATE = registry.sikalabs.com/registry/argocd-training-private/image-updater-example
 
 build-and-push:

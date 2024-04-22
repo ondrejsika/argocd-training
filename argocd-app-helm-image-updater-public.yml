@@ -4,7 +4,7 @@ metadata:
   name: hello-world-helm-image-updater-public
   namespace: argocd
   annotations:
-    argocd-image-updater.argoproj.io/image-list: 1=reg.istry.cz/image-updater-example:latest
+    argocd-image-updater.argoproj.io/image-list: 1=ttl.sh/image-updater-example:latest
     argocd-image-updater.argoproj.io/1.helm.image-spec: image
     argocd-image-updater.argoproj.io/1.update-strategy: digest
     argocd-image-updater.argoproj.io/1.force-update: 'true'
@@ -24,7 +24,7 @@ spec:
       releaseName: hello-world-helm-image-updater-public
       values: |
         host: hello-world-helm-image-updater-public.k8s.sikademo.com
-        image: reg.istry.cz/image-updater-example
+        image: ttl.sh/image-updater-example
   syncPolicy:
     automated:
       prune: true
