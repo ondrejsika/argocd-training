@@ -204,6 +204,21 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj-labs/argoc
 kubectl apply -f examples/image_updater/helm_public.yml
 ```
 
+### Private Example
+
+Allow Image Updater to access secrets in all namespaces
+
+```
+kubectl apply -f argocd_image_updater_read_secrets_in_all_namespaces.yml
+```
+
+Apply the example
+
+```
+kubectl apply -f examples/image_updater/helm_private.yml
+```
+
+
 ### slu CLI
 
 Get Initial `admin` password
