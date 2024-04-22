@@ -22,5 +22,5 @@ spec:
     path: charts/hello-world
     helm:
       releaseName: helm-from-git
-      values: |
+      valuesObject:
         replicas: 3
