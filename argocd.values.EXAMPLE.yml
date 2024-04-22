@@ -3,13 +3,9 @@
 server:
   ingress:
     enabled: true
-    hosts:
-      - argocd.k8s.sikademo.com
+    hostname: argocd.k8s.sikademo.com
+    tls: true
     ingressClassName: nginx
     annotations:
       cert-manager.io/cluster-issuer: letsencrypt
       nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
-    tls:
-      - hosts:
-        - argocd.k8s.sikademo.com
-        secretName: argocd-tls
