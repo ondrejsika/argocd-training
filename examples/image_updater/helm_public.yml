@@ -21,8 +21,7 @@ spec:
     targetRevision: HEAD
     path: charts/one-image
     helm:
-      releaseName: hello-world-helm-image-updater-public
-      values: |
+      valuesObject:
         host: hello-world-helm-image-updater-public.k8s.sikademo.com
         image: ttl.sh/image-updater-example
   syncPolicy:
