@@ -19,7 +19,7 @@ spec:
   source:
     repoURL: https://helm.sikalabs.io
     chart: hello-world
-    targetRevision: 0.3.0
+    targetRevision: 0.9.0
     helm:
       releaseName: helm-from-package
       values: |
