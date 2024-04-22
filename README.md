@@ -291,6 +291,11 @@ Wanna to go for a beer or do some work together? Just [book me](https://book-me.
 
 ### 2023-12-01
 
+- Repositories
+  - My changes in this repo - https://github.com/sika-training-examples/2024-04-22-argocd-training-ondrejsika
+  - ArgoCD Apps - https://github.com/sika-training-examples/2024-02-22-argocd-apps
+  - Example project with Gitlab CI pipeline - https://github.com/sika-training-examples/2024-04-22-argocd-example-pipeline
+
 - Repositories from gitlab.sikademo.com
   - example/os - https://github.com/sika-training-examples/2023-12-01_argocd_training_ondrejsika
   - example/1 - https://github.com/sika-training-examples/2023-12-01_argocd_training_1
