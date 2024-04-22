@@ -122,6 +122,14 @@ Example with pre & post sync hooks
 kubectl apply -f examples/sync-hooks/app-of-apps.yml
 ```
 
+## Sync Waves
+
+Example of sync waves
+
+```
+kubectl apply -f examples/sync-waves/app-of-apps.yml
+```
+
 ## Own SSH known hosts
 
 Get keys using `ssh-keyscan`
