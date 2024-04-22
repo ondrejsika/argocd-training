@@ -116,7 +116,9 @@ kubectl apply -f examples/helm_with_dependencies.yml
 
 ## Sync Hooks
 
-Example with pre & post sync hooks
+[Resource Hooks Docs](https://argo-cd.readthedocs.io/en/stable/user-guide/resource_hooks/)
+
+Example with pre & post sync hooks.
 
 ```
 kubectl apply -f examples/sync-hooks/app-of-apps.yml
