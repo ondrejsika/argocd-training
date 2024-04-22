@@ -1,0 +1,38 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: hello-world-helm-image-updater-private
+  namespace: argocd
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: 1=registry.sikalabs.com/registry/argocd-training-private/image-updater-example:lastest
+    argocd-image-updater.argoproj.io/1.helm.image-spec: image
+    argocd-image-updater.argoproj.io/1.update-strategy: digest
+    argocd-image-updater.argoproj.io/1.force-update: 'true'
+    argocd-image-updater.argoproj.io/1.platforms: linux/amd64
+    # example/hello-world-helm-image-updater-private-docker = {{.Release.Namespace}}/{{.Release.Name}}-docker
+    argocd-image-updater.argoproj.io/1.pull-secret: pullsecret:example/hello-world-helm-image-updater-private-docker
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: example
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    repoURL: https://github.com/sikalabs/charts.git
+    targetRevision: HEAD
+    path: charts/one-image
+    helm:
+      releaseName: hello-world-helm-image-updater-private
+      values: |
+        host: hello-world-helm-image-updater-private.k8s.sikademo.com
+        image: registry.sikalabs.com/registry/argocd-training-private/image-updater-example
+        dockerRegistry: registry.sikalabs.com
+        # token: glpat-QARXcksb9QQsoQ4RF4ig
+        dockerRegistryAuth: dG9rZW46Z2xwYXQtUUFSWGNrc2I5UVFzb1E0UkY0aWc=
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
