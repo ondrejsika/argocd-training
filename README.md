@@ -221,7 +221,7 @@ spec:
 Try:
 
 ```
-kubectl apply -f argocd-app-bar.yml
+kubectl apply -f examples/appproj/app_bar.yml
 ```
 
 ## App of Apps
