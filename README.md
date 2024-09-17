@@ -268,7 +268,7 @@ kubectl apply -f examples/image_updater/helm_public.yml
 Allow Image Updater to access secrets in all namespaces
 
 ```
-kubectl apply -f argocd_image_updater_read_secrets_in_all_namespaces.yml
+kubectl apply -f examples/argocd_image_updater_read_secrets_in_all_namespaces.yml
 ```
 
 Apply the example
