@@ -1,3 +1,7 @@
+install-all:
+	@make install-essentials
+	@make install-argocd
+
 install-argocd:
 	@make _install-argocd
 
