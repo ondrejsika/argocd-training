@@ -175,7 +175,7 @@ ssh-keyscan gitlab.sikademo.com
 Add to `configmap` `argocd-ssh-known-hosts-cm` in `argocd` namespace.
 
 ```
-kubectl patch -n argocd configmap argocd-ssh-known-hosts-cm --patch-file argocd-ssh-known-hosts-cm-patch.yml
+kubectl patch -n argocd configmap argocd-ssh-known-hosts-cm --patch-file examples/argocd-ssh-known-hosts-cm-patch.yml
 ```
 
 ## App of Apps
