@@ -8,8 +8,8 @@ metadata:
 spec:
   project: default
   destination:
-    namespace: counter
     server: https://kubernetes.default.svc
+    namespace: counter
   syncPolicy:
     automated:
       prune: true
