@@ -164,6 +164,20 @@ SSH
 kubectl apply -f examples/repos/repo-https.yml
 ```
 
+## Own SSH known hosts
+
+Get keys using `ssh-keyscan`
+
+```
+ssh-keyscan gitlab.sikademo.com
+```
+
+Add to `configmap` `argocd-ssh-known-hosts-cm` in `argocd` namespace.
+
+```
+kubectl patch -n argocd configmap argocd-ssh-known-hosts-cm --patch-file argocd-ssh-known-hosts-cm-patch.yml
+```
+
 ## Sync Hooks
 
 [Resource Hooks Docs](https://argo-cd.readthedocs.io/en/stable/user-guide/resource_hooks/)
@@ -180,20 +194,6 @@ Example of sync waves
 
 ```
 kubectl apply -f examples/sync-waves/app-of-apps.yml
-```
-
-## Own SSH known hosts
-
-Get keys using `ssh-keyscan`
-
-```
-ssh-keyscan gitlab.sikademo.com
-```
-
-Add to `configmap` `argocd-ssh-known-hosts-cm` in `argocd` namespace.
-
-```
-kubectl patch -n argocd configmap argocd-ssh-known-hosts-cm --patch-file argocd-ssh-known-hosts-cm-patch.yml
 ```
 
 ## ArgoCD App Projects
