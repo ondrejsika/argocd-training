@@ -151,6 +151,19 @@ You can also install Helm without any specific helm configuration
 kubectl apply -f examples/helm_with_dependencies.yml
 ```
 
+## Private Repositories
+
+HTTPS
+
+```
+kubectl apply -f examples/repos/repo-https.yml
+```
+SSH
+
+```
+kubectl apply -f examples/repos/repo-https.yml
+```
+
 ## Sync Hooks
 
 [Resource Hooks Docs](https://argo-cd.readthedocs.io/en/stable/user-guide/resource_hooks/)
@@ -181,19 +194,6 @@ Add to `configmap` `argocd-ssh-known-hosts-cm` in `argocd` namespace.
 
 ```
 kubectl patch -n argocd configmap argocd-ssh-known-hosts-cm --patch-file argocd-ssh-known-hosts-cm-patch.yml
-```
-
-## Private Repositories
-
-HTTPS
-
-```
-kubectl apply -f repo-https.yml
-```
-SSH
-
-```
-kubectl apply -f repo-https.yml
 ```
 
 ## ArgoCD App Projects
