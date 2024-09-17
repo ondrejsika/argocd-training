@@ -108,6 +108,18 @@ spec:
       selfHeal: true
 ```
 
+Try it
+
+```
+kubectl apply -f examples/apps/manifests_v2.yml
+```
+
+or
+
+```
+kubectl apply -f examples/apps/manifests_gitlab_v2.yml
+```
+
 ## ArgoCD App with Helm
 
 Helm package from Git repo
