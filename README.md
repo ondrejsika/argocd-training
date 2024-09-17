@@ -108,6 +108,17 @@ spec:
       selfHeal: true
 ```
 
+## Delete resources after delete App
+
+Add finalizer:
+
+```yaml
+metadata:
+  # ...
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+```
+
 Try it
 
 ```
