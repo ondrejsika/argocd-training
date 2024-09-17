@@ -20,6 +20,5 @@ spec:
     repoURL: https://github.com/ondrejsika/counter.git
     path: ./charts/counter
     helm:
-      releaseName: counter
       valuesObject:
         host: counter.k8s.sikademo.com
