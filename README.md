@@ -178,6 +178,20 @@ Add to `configmap` `argocd-ssh-known-hosts-cm` in `argocd` namespace.
 kubectl patch -n argocd configmap argocd-ssh-known-hosts-cm --patch-file argocd-ssh-known-hosts-cm-patch.yml
 ```
 
+## App of Apps
+
+App of Apps is global ArgoCD app which is created manually in the cluster and manages all others ArgoCD Apps using ArgoCD
+
+```
+kubectl apply -f examples/app_of_apps/app_of_apps.yml
+```
+
+or
+
+```
+kubectl apply -f https://raw.githubusercontent.com/ondrejsika/argocd-training/master/examples/app_of_apps/app_of_apps.yml
+```
+
 ## Sync Hooks
 
 [Resource Hooks Docs](https://argo-cd.readthedocs.io/en/stable/user-guide/resource_hooks/)
