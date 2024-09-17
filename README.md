@@ -60,7 +60,7 @@ make install-argocd-with-sso
 Declarative
 
 ```
-kubectl apply -f examples/app-manifests.yml
+kubectl apply -f examples/apps/manifests_v1.yml
 ```
 
 ## Create ArgoCD App from own repository
@@ -74,7 +74,7 @@ Make changes to your repository ([gitlab.sikademo.com/ondrejsika/argocd-training
 Update repo path
 
 ```
-kubectl apply -f examples/app-manifests-gitlab.yml
+kubectl apply -f examples/apps/manifests_gitlab_v1.yml
 ```
 
 You can click **refresh** to fetch new repo version.

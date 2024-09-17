@@ -3,11 +3,19 @@ kind: Application
 metadata:
   name: manifests
   namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
   destination:
-    namespace: default
+    namespace: example-manifests
     server: https://kubernetes.default.svc
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
   source:
     path: examples/manifests
     repoURL: https://github.com/ondrejsika/argocd-training.git
