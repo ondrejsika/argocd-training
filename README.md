@@ -199,8 +199,8 @@ kubectl apply -f examples/sync-waves/app-of-apps.yml
 ## ArgoCD App Projects
 
 ```
-kubectl apply -f appproj-foo.yml
-kubectl apply -f appproj-bar.yml
+kubectl apply -f examples/appproj/appproj_foo.yml
+kubectl apply -f examples/appproj/appproj_bar.yml
 ```
 
 ## Sync Window
