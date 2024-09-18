@@ -246,6 +246,10 @@ Application Set is a way how to create multiple ArgoCD Apps from one template.
 kubectl apply -f examples/appset.yml
 ```
 
+## Multiple Sources
+
+- https://github.com/ondrejsika/argocd-apps-values-in-files-example
+
 ## ArgoCD Image Updater
 
 - Docs - https://argocd-image-updater.readthedocs.io/en/stable/
