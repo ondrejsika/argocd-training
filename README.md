@@ -108,6 +108,41 @@ spec:
       selfHeal: true
 ```
 
+## Source Directory
+
+Docs: [Directory](https://argo-cd.readthedocs.io/en/stable/user-guide/directory/)
+
+Recursive source directory, useful for app-of-apps pattern
+
+```yaml
+spec:
+  # ...
+  source:
+    directory:
+      recurse: true
+```
+
+Exclude specific files, useful for `values.yaml` for Helm
+
+Docs: [Directory / Excluding Certain Files](https://argo-cd.readthedocs.io/en/stable/user-guide/directory/#excluding-certain-files)
+
+```yaml
+spec:
+  source:
+    directory:
+      exclude: '{*.values.yaml,*.values.yml}'
+```
+
+Include only specific files
+
+```yaml
+spec:
+  # ...
+  source:
+    directory:
+      include: 'kubernetes/*'
+```
+
 ## Delete resources after delete App
 
 Add finalizer:
