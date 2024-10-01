@@ -4,6 +4,8 @@
 
 ## Course
 
+Example ArgoCD Instance from ArgoCD team <https://cd.apps.argoproj.io/>.
+
 ## Install ArgoCD
 
 Install cluster essentials (ingress-nginx, cert-manager, letsencrypt issuer)
