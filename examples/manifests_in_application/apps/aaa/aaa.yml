@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aaa
+spec:
+  revisionHistoryLimit: 0
+  replicas: 3
+  selector:
+    matchLabels:
+      app: aaa
+  template:
+    metadata:
+      labels:
+        app: aaa
+    spec:
+      containers:
+        - name: main
+          image: sikalabs/hello-world-server
+          ports:
+            - name: http
+              containerPort: 8000
+          resources:
+            requests:
+              cpu: 20m
+              memory: 20Mi
+            limits:
+              cpu: 40m
+              memory: 40Mi

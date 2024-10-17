@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app-of-apps-manifests-in-application-example
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+  source:
+    repoURL: https://github.com/ondrejsika/argocd-training.git
+    path: examples/manifests_in_application/apps
+    targetRevision: master
+    directory:
+      recurse: true
+      exclude: '{**/manifests/**,**/Chart.yaml,**/templates/**}'
