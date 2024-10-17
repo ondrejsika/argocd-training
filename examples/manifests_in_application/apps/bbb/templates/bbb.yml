@@ -1,17 +1,19 @@
+{{ range $suffix := .Values.suffixes }}
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bbb
+  name: bbb-{{ $suffix }}
 spec:
   revisionHistoryLimit: 0
   replicas: 3
   selector:
     matchLabels:
-      app: bbb
+      app: bbb-{{ $suffix }}
   template:
     metadata:
       labels:
-        app: bbb
+        app: bbb-{{ $suffix }}
     spec:
       containers:
         - name: main
@@ -26,3 +28,4 @@ spec:
             limits:
               cpu: 40m
               memory: 40Mi
+{{ end }}
