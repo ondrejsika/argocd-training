@@ -56,17 +56,10 @@ kubectl apply -f https://raw.githubusercontent.com/ondrejsika/kubernetes-trainin
 
 ## Install ArgoCD
 
-Install cluster essentials (ingress-nginx, cert-manager, letsencrypt issuer)
-
-```
-make install-essentials
-```
-
 Install ArgoCD
 
 ```
 make install-argocd
-make install-essentials
 ```
 
 Get `admin` initial password
