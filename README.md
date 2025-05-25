@@ -59,7 +59,13 @@ kubectl apply -f https://raw.githubusercontent.com/ondrejsika/kubernetes-trainin
 Install ArgoCD
 
 ```
-make install-argocd
+helm upgrade --install \
+  argocd argo-cd \
+  --repo https://argoproj.github.io/argo-helm \
+  --create-namespace \
+  --namespace argocd \
+  --values argocd.values.yml \
+  --wait
 ```
 
 Get `admin` initial password
