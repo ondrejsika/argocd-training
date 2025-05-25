@@ -6,6 +6,54 @@
 
 Example ArgoCD Instance from ArgoCD team <https://cd.apps.argoproj.io/>.
 
+## Setup Local Kubernetes Cluster
+
+Create local Kubernetes cluster using [k3d](https://k3d.io/).
+
+```
+k3d cluster create training \
+  --k3s-arg "--disable=traefik@server:0" \
+  --servers 1 --agents 1 \
+  --port "80:80@loadbalancer" \
+  --port "443:443@loadbalancer" \
+  --wait
+```
+
+Install ingress-nginx
+
+```
+helm upgrade --install \
+	ingress-nginx ingress-nginx \
+	--repo https://kubernetes.github.io/ingress-nginx \
+	--create-namespace \
+	--namespace ingress-nginx \
+	--set controller.service.type=ClusterIP \
+	--set controller.ingressClassResource.default=true \
+	--set controller.kind=DaemonSet \
+	--set controller.hostPort.enabled=true \
+	--set controller.metrics.enabled=true \
+	--set controller.config.use-proxy-protocol=false \
+	--wait
+```
+
+## Install cert-manager
+
+```
+helm upgrade --install \
+  cert-manager cert-manager \
+  --repo https://charts.jetstack.io \
+  --create-namespace \
+  --namespace cert-manager \
+  --set crds.enabled=true \
+  --wait
+```
+
+## Install Let's Encrypt Issuer
+
+```
+kubectl apply -f https://raw.githubusercontent.com/ondrejsika/kubernetes-training/refs/heads/master/clusterissuer-letsencrypt.yml
+```
+
 ## Install ArgoCD
 
 Install cluster essentials (ingress-nginx, cert-manager, letsencrypt issuer)
