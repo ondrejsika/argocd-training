@@ -206,7 +206,7 @@ Docs: [Directory / Excluding Certain Files](https://argo-cd.readthedocs.io/en/st
 spec:
   source:
     directory:
-      exclude: '{*.values.yaml,*.values.yml}'
+      exclude: '{**/manifests/**,**/Chart.yaml,**/values.y*ml,**/*.values.y*ml,**/templates/**}'
 ```
 
 Include only specific files
