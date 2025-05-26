@@ -21,6 +21,5 @@ spec:
     targetRevision: master
     path: charts/hello-world
     helm:
-      releaseName: git
       valuesObject:
         replicas: 3
