@@ -69,6 +69,18 @@ Go to https://gitlab.sikademo.com with credentials:
 
 Import this training repository from Github to group `training` in demo Gitlab with your name (using Git).
 
+Go to https://gitlab.sikademo.com/training anc click on **New project**.
+
+![](./_images/repo_import_1.jpeg)
+
+Choose **Import project** and then **Git**.
+
+![](./_images/repo_import_2.jpeg)
+
+Enter the URL of this repository: `https://github.com/ondrejsika/argocd-training.git` rename it to `yourname` anc click on **Create project**.
+
+![](./_images/repo_import_3.jpeg)
+
 ## Install ArgoCD
 
 Install ArgoCD
