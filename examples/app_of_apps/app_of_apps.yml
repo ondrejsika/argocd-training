@@ -22,3 +22,4 @@ spec:
     path: examples/app_of_apps/apps
     directory:
       recurse: true
+      exclude: '{**/manifests/**,**/Chart.yaml,**/values.y*ml,**/*.values.y*ml,**/templates/**}'
