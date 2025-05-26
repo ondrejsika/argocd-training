@@ -60,6 +60,15 @@ Go to `https://codeX.sikademo.com` where X is your lab number (e.g. `https://cod
 
 The password will be provided during the training.
 
+## Login to Gitlab
+
+Go to https://gitlab.sikademo.com with credentials:
+
+- username: `demo-user`
+- password: `asdfasdf`
+
+Import this training repository from Github to group `training` in demo Gitlab with your name (using Git).
+
 ## Install ArgoCD
 
 Install ArgoCD
