@@ -54,6 +54,12 @@ helm upgrade --install \
 kubectl apply -f https://raw.githubusercontent.com/ondrejsika/kubernetes-training/refs/heads/master/clusterissuer-letsencrypt.yml
 ```
 
+## Connect the Lab
+
+Go to `https://codeX.sikademo.com` where X is your lab number (e.g. `https://code53.sikademo.com`).
+
+The password will be provided during the training.
+
 ## Install ArgoCD
 
 Install ArgoCD
