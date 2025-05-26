@@ -36,7 +36,7 @@ helm upgrade --install \
 	--wait
 ```
 
-## Install cert-manager
+Install cert-manager
 
 ```
 helm upgrade --install \
