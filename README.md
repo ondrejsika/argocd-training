@@ -291,7 +291,7 @@ kubectl apply -f examples/sync_hooks/app.yaml
 Example of sync waves
 
 ```
-kubectl apply -f examples/sync-waves/app-of-apps.yml
+kubectl apply -f examples/sync_waves/app_of_apps.yml
 ```
 
 ## ArgoCD App Projects
