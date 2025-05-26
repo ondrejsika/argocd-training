@@ -8,6 +8,6 @@ metadata:
 stringData:
   project: default
   type: git
-  url: https://gitlab.sikademo.com/ondrejsika/private.git
+  url: https://github.com/ondrejsika/argocd-training.git
   username: ondrejsika
-  password: zt1a4d_BJwNLcWKDf7vF
+  password: token
