@@ -283,7 +283,7 @@ kubectl apply -f https://raw.githubusercontent.com/ondrejsika/argocd-training/ma
 Example with pre & post sync hooks.
 
 ```
-kubectl apply -f examples/sync-hooks/app-of-apps.yml
+kubectl apply -f examples/sync_hooks/app.yaml
 ```
 
 ## Sync Waves
