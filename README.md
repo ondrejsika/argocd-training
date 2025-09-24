@@ -485,5 +485,9 @@ Wanna to go for a beer or do some work together? Just [book me](https://book-me.
 Replace README of training repo with link to this repo
 
 ```
-echo '# !!! This is not an original ArgoCD Training repo. This repo has many changes from past training session. If you want to see an original ArgoCD training repo, please go to [ondrejsika/argocd-training](https://github.com/ondrejsika/argocd-training)' > README.md
+curl -o README.md https://raw.githubusercontent.com/ondrejsikax/banners-for-training/refs/heads/master/banners/argocd.md
+echo "" >> README.md
+echo '# !!! This is not an original ArgoCD Training repo. This repo has many changes from past training session. If you want to see an original ArgoCD training repo, please go to [ondrejsika/argocd-training](https://github.com/ondrejsika/argocd-training)' >> README.md
+git add README.md
+git commit -m "Replace README with link to original repo"
 ```
