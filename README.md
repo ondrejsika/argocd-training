@@ -38,6 +38,12 @@ For sharing links & "secrets".
 
 ## Course
 
+## What is ArgoCD?
+
+ArgoCD is a declarative, GitOps continuous delivery tool for Kubernetes.
+
+Docs: <https://argo-cd.readthedocs.io/>
+
 Example ArgoCD Instance from ArgoCD team <https://cd.apps.argoproj.io/>.
 
 ## Connect the Lab
