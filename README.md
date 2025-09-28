@@ -40,6 +40,12 @@ For sharing links & "secrets".
 
 Example ArgoCD Instance from ArgoCD team <https://cd.apps.argoproj.io/>.
 
+## Connect the Lab
+
+Go to `https://codeX.sikademo.com` where X is your lab number (e.g. `https://code53.sikademo.com`).
+
+The password will be provided during the training.
+
 ## Setup Local Kubernetes Cluster
 
 Create local Kubernetes cluster using [k3d](https://k3d.io/).
@@ -87,12 +93,6 @@ helm upgrade --install \
 ```
 kubectl apply -f https://raw.githubusercontent.com/ondrejsika/kubernetes-training/refs/heads/master/clusterissuer-letsencrypt.yml
 ```
-
-## Connect the Lab
-
-Go to `https://codeX.sikademo.com` where X is your lab number (e.g. `https://code53.sikademo.com`).
-
-The password will be provided during the training.
 
 ## Login to Gitlab
 
