@@ -2,6 +2,40 @@
 
 # ArgoCD Training
 
+## About Course
+
+- [ArgoCD Training in Czech Republic & Slovakia](https://ondrej-sika.cz/skoleni/argocd?_s=ghe)
+- [ArgoCD Training in Europe](https://ondrej-sika.com/training/argocd?_s=gh)
+
+### Related Courses
+
+Kubernetes
+
+- [Kubernetes Training in Czech Republic & Slovakia](https://ondrej-sika.cz/skoleni/kubernetes?_s=ghe)
+- [Kubernetes Training in Europe](https://ondrej-sika.com/training/kubernetes?_s=gh)
+
+Docker
+
+- [Docker Training in Czech Republic & Slovakia](https://ondrej-sika.cz/skoleni/docker?_s=ghe)
+- [Docker Training in Europe](https://ondrej-sika.com/training/docker?_s=gh)
+
+## Chat
+
+For sharing links & "secrets".
+
+- Zoom Chat, Microsoft Teams or Google Meet Chat
+- Slack - https://sikapublic.slack.com/
+- https://sika.link/chat (tlk.io)
+
+## About Me - [Ondrej Sika](https://sika.io)
+
+**Freelance DevOps Engineer, Consultant & Lecturer**
+
+- Complete DevOps Pipeline
+- Open Source / Linux Stack
+- Cloud & On-Premise
+- Technologies: Git, Gitlab, Gitlab CI, Docker, Kubernetes, Terraform, Prometheus, ELK / EFK, Rancher, Proxmox, DigitalOcean, AWS
+
 ## Course
 
 Example ArgoCD Instance from ArgoCD team <https://cd.apps.argoproj.io/>.
