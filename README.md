@@ -1,5 +1,7 @@
 [Ondrej Sika (sika.io)](https://sika.io) | <ondrej@sika.io> | [go to course ->](#course) | [join slack](https://sika.link/slack-sikapublic), [open slack](https://sikapublic.slack.com) | [join.sika.io](https://join.sika.io) | [__Školení ArgoCD__](https://ondrej-sika.cz/skoleni/argocd/) 🚀💻
 
+![ArgoCD Logo](./_images/argocd_logo.svg)
+
 # ArgoCD Training
 
 ## About Course
