@@ -38,6 +38,10 @@ For sharing links & "secrets".
 
 ## Course
 
+## What is GitOps?
+
+GitOps is a way how to do Continuous Delivery using Git as a single source of truth.
+
 ## What is ArgoCD?
 
 ArgoCD is a declarative, GitOps continuous delivery tool for Kubernetes.
