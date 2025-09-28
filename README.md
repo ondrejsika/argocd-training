@@ -50,6 +50,20 @@ Docs: <https://argo-cd.readthedocs.io/>
 
 Example ArgoCD Instance from ArgoCD team <https://cd.apps.argoproj.io/>.
 
+## ArgoCD Features
+
+- GitOps for Kubernetes
+  - YAML Manifests
+  - Helm Charts
+  - Kustomize
+  - Jsonnet and custom tools
+- Web UI, API & CLI
+- Automatic Sync, Self Heal & Sync Windows
+- Sync Hooks & Sync Waves
+- Declarative configuration of ArgoCD itself
+- Single Sign-On (SSO) with OIDC
+- Multi-Tenancy with Projects & RBAC
+
 ## Connect the Lab
 
 Go to `https://codeX.sikademo.com` where X is your lab number (e.g. `https://code53.sikademo.com`).
