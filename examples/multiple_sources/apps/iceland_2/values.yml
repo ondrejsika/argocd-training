@@ -1,0 +1,2 @@
+host: iceland-2.k8s.sikademo.com
+image: ondrejsika/iceland-2
