@@ -36,8 +36,7 @@ spec:
         chart: hello-world
         targetRevision: 0.9.0
         helm:
-          releaseName: '{{name}}'
-          values: |
-            host: 'appset-{{name}}.k8s.sikademo.com'
+          valuesObject:
+            host: 'appset-{{name}}.lab0.sikademo.com'
             TEXT: '{{text}}'
-            replicas: {{replicas}}
+            replicas: '{{replicas}}'
