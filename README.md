@@ -509,6 +509,11 @@ Wanna to go for a beer or do some work together? Just [book me](https://book-me.
 
 ## Past Training Sessions
 
+### 2025-09-29
+
+- ArgoCD Apps Monorepo - https://github.com/sika-training-examples/2025-09-29_ondrejsika_argocd_training
+- My changes in this repo during the training (not so nice) - https://github.com/sika-training-examples/2025-09-29_argocd_training_ondrejsika
+
 ### 2025-05-26
 
 - ArgoCD Apps Monorepo - https://github.com/sika-training-examples/2025-05-26-argocd-apps-example
