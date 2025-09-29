@@ -148,6 +148,12 @@ Using [slu](https://github.com/sikalabs/slu)
 slu argocd initial-password
 ```
 
+or shortcut
+
+```
+slu acd ip
+```
+
 Copy to pasteboard (Mac)
 
 ```
