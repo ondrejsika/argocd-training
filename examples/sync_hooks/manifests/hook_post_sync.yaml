@@ -11,10 +11,10 @@ spec:
     spec:
       containers:
       - name: main
-        image: sikalabs/dogsay:v0.1.0
+        image: sikalabs/slu:v0.89.0
         command:
           - /bin/bash
           - -c
-          - dogsay "Done, Good Job!"
+          - slu ondrejsika dogsay "Done, Good Job!"
       restartPolicy: Never
   backoffLimit: 0
