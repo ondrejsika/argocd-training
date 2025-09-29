@@ -134,7 +134,9 @@ helm upgrade --install \
   --wait
 ```
 
-Get `admin` initial password
+In our example default user is `admin` with password `admin`.
+
+In default / production deployments, you can get `admin` initial password
 
 ```
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d && echo
