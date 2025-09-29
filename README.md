@@ -158,20 +158,6 @@ See
 
 <https://argocd.k8s.sikademo.com>
 
-## Install ArgoCD with SSO
-
-Create `argocd.sso.values.yml`
-
-```
-cp argocd.sso.values.EXAMPLE.yml argocd.sso.values.yml
-```
-
-Install
-
-```
-make install-argocd-with-sso
-```
-
 ## Create basic ArgoCD App
 
 Declarative
