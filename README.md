@@ -120,27 +120,6 @@ helm upgrade --install \
 kubectl apply -f https://raw.githubusercontent.com/ondrejsika/kubernetes-training/refs/heads/master/clusterissuer-letsencrypt.yml
 ```
 
-## Login to Gitlab
-
-Go to https://gitlab.sikademo.com with credentials:
-
-- username: `demo-user`
-- password: `asdfasdf`
-
-Import this training repository from Github to group `training` in demo Gitlab with your name (using Git).
-
-Go to https://gitlab.sikademo.com/training anc click on **New project**.
-
-![](./_images/repo_import_1.jpeg)
-
-Choose **Import project** and then **Git**.
-
-![](./_images/repo_import_2.jpeg)
-
-Enter the URL of this repository: `https://github.com/ondrejsika/argocd-training.git` rename it to `yourname` anc click on **Create project**.
-
-![](./_images/repo_import_3.jpeg)
-
 ## Install ArgoCD
 
 Install ArgoCD
@@ -200,6 +179,25 @@ kubectl apply -f examples/apps/manifests_v1.yml
 ```
 
 ## Create ArgoCD App from own repository
+
+Login to Gitlab, go to https://gitlab.sikademo.com with credentials:
+
+- username: `demo-user`
+- password: `asdfasdf`
+
+Import this training repository from Github to group `training` in demo Gitlab with your name (using Git).
+
+Go to https://gitlab.sikademo.com/training anc click on **New project**.
+
+![](./_images/repo_import_1.jpeg)
+
+Choose **Import project** and then **Git**.
+
+![](./_images/repo_import_2.jpeg)
+
+Enter the URL of this repository: `https://github.com/ondrejsika/argocd-training.git` rename it to `yourname` anc click on **Create project**.
+
+![](./_images/repo_import_3.jpeg)
 
 Fork [ondrejsika/argocd-training](https://github.com/ondrjsika/argocd-training) to Gitlab.
 
