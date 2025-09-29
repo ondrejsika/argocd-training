@@ -9,3 +9,6 @@ server:
     annotations:
       cert-manager.io/cluster-issuer: letsencrypt
       nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+configs:
+  secret:
+    argocdServerAdminPassword: $2a$10$od0Ap6gZohcqAK5WInvdv.ykbU5asPfIbwFRzn/upGIT6VGRrbAdO # password is: admin
