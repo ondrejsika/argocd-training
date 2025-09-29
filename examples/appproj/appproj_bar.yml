@@ -20,3 +20,4 @@ spec:
     schedule: 0 * * * *
     timeZone: UTC
     manualSync: false
+    # manualSync: true
