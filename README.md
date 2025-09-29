@@ -193,10 +193,10 @@ Fork [ondrejsika/argocd-training](https://github.com/ondrjsika/argocd-training) 
 
 Make changes to your repository ([gitlab.sikademo.com/ondrejsika/argocd-training](https://gitlab.sikademo.com/ondrejsika/argocd-training)) and see if ArgoCD propagate those changes to cluster.
 
-Update repo path
+Update repo path and reapply ArgoCD App
 
 ```
-kubectl apply -f examples/apps/manifests_gitlab_v1.yml
+kubectl apply -f examples/apps/manifests_v1.yml
 ```
 
 You can click **refresh** to fetch new repo version.
