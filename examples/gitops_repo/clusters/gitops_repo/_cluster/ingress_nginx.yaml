@@ -1,0 +1,57 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ingress-nginx
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: ingress-nginx
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+  source:
+    repoURL: https://kubernetes.github.io/ingress-nginx
+    chart: ingress-nginx
+    targetRevision: 4.12.0
+    helm:
+      valuesObject:
+        # https://github.com/kubernetes/ingress-nginx/blob/main/charts/ingress-nginx/values.yaml
+        # https://artifacthub.io/packages/helm/ingress-nginx/ingress-nginx?modal=values
+        controller:
+          service:
+            type: ClusterIP
+          ingressClassResource:
+            default: true
+          kind: DaemonSet
+          hostPort:
+            enabled: true
+          metrics:
+            enabled: true
+            serviceMonitor:
+              enabled: false
+          config:
+            enable-access-log: "true"
+            log-format-upstream: >-
+              $remote_addr - $remote_user [$time_local] "$request" $status $body_bytes_sent
+              "$http_referer" "$http_user_agent" "$request_length" "$request_time" "$upstream_response_time"
+              "$host"
+        defaultBackend:
+          enabled: true
+          image:
+            registry: ghcr.io
+            image: sikalabs/sikalabs-kubernetes-homepage
+            tag: latest
+            pullPolicy: Always
+          extraEnvs:
+            - name: CLUSTER
+              value: "gitops-repo"
+            - name: DOMAIN
+              value: "gitops-repo.sikademo.com"
+          port: 8000

@@ -1,0 +1,41 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: signpost
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  destination:
+    namespace: signpost
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
+  source:
+    repoURL: https://github.com/sikalabs/charts.git
+    path: charts/signpost
+    helm:
+      valuesObject:
+        host: signpost.gitops-repo.sikademo.com
+        signpost_yaml:
+          SiteHeading: gitops-repo.sikademo.com
+          CompanyName: gitops-repo.sikademo.com cluster
+          CompanyDomain: sika.io
+          CompanyUrl: https://sika.io
+          Rows:
+          - Cols:
+            - Blocks:
+              - Heading: Platform
+                Links:
+                - Title: ArgoCD
+                  URL: https://argocd.gitops-repo.sikademo.com
+            - Blocks:
+              - Heading: Apps
+                Links:
+                - Title: Hello
+                  URL: https://hello.gitops-repo.sikademo.com
