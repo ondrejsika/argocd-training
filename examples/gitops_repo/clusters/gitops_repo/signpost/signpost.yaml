@@ -23,8 +23,8 @@ spec:
       valuesObject:
         host: signpost.gitops-repo.sikademo.com
         signpost_yaml:
-          SiteHeading: gitops-repo.sikademo.com
-          CompanyName: gitops-repo.sikademo.com cluster
+          SiteHeading: gitops-repo.sikademo.com cluster
+          CompanyName: Ondrej Sika
           CompanyDomain: sika.io
           CompanyUrl: https://sika.io
           Rows:
